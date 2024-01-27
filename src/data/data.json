@@ -1,0 +1,261 @@
+{
+  "mockDataProducts": [
+    {
+      "id": "0",
+      "title": "IPhone 11",
+      "price": 750,
+      "desc": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.",
+      "category": "Iphone",
+      "img": "https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:80/plain/https://cellphones.com.vn/media/catalog/product/v/n/vn_iphone_15_blue_pdp_image_position-1a_blue_color_1_4.jpg",
+      "rating": {
+        "rate": 3.9,
+        "count": 120
+      }
+    },
+    {
+      "id": "1",
+      "title": "IPhone 11 Pro Max",
+      "price": 800,
+      "desc": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.",
+      "category": "Iphone",
+      "img": "https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:80/plain/https://cellphones.com.vn/media/catalog/product/v/n/vn_iphone_15_yellow_pdp_image_position-1a_yellow_color_1_4.jpg",
+      "rating": {
+        "rate": 3.9,
+        "count": 120
+      }
+    },
+    {
+      "id": "3",
+      "title": "IPhone 12",
+      "price": 750,
+      "desc": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.",
+      "category": "Iphone",
+      "img": "https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:80/plain/https://cellphones.com.vn/media/catalog/product/v/n/vn_iphone_15_blue_pdp_image_position-1a_blue_color_1_4.jpg",
+      "rating": {
+        "rate": 3.9,
+        "count": 120
+      }
+    },
+    {
+      "id": "4",
+      "title": "IPhone 12 Pro",
+      "price": 1150,
+      "desc": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.",
+      "category": "Iphone",
+      "img": "https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:80/plain/https://cellphones.com.vn/media/catalog/product/i/p/iphone-15-plus_1__1.png",
+      "rating": {
+        "rate": 3.9,
+        "count": 120
+      }
+    },
+    {
+      "id": "5",
+      "title": "IPhone 12 Pro Max",
+      "price": 1270,
+      "desc": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.",
+      "category": "Iphone",
+      "img": "https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:80/plain/https://cellphones.com.vn/media/catalog/product/v/n/vn_iphone_15_pink_pdp_image_position-1a_pink_color_1_3.jpg",
+      "rating": {
+        "rate": 3.9,
+        "count": 120
+      }
+    },
+    {
+      "id": "6",
+      "title": "IPhone 15 Pro",
+      "price": 2000,
+      "desc": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.",
+      "category": "Iphone",
+      "img": "https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:80/plain/https://cellphones.com.vn/media/catalog/product/o/p/op-lung-apple-iphone-15-chinh-hang-10.png",
+      "rating": {
+        "rate": 3.9,
+        "count": 120
+      }
+    },
+    {
+      "id": "7",
+      "title": "IPhone 12 Pro Max",
+      "price": 1270,
+      "desc": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.",
+      "category": "Iphone",
+      "img": "https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:80/plain/https://cellphones.com.vn/media/catalog/product/o/p/op-lung-apple-iphone-15-chinh-hang-05_1.png",
+      "rating": {
+        "rate": 3.9,
+        "count": 120
+      }
+    },
+    {
+      "id": "8",
+      "title": "Samsung Galaxy Note 9",
+      "price": 1250,
+      "desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      "category": "Motorola",
+      "img": "https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:80/plain/https://cellphones.com.vn/media/catalog/product/v/n/vn_iphone_15_green_pdp_image_position-1a_green_color_1_4.jpg",
+      "rating": {
+        "rate": 3.9,
+        "count": 120
+      }
+    },
+    {
+      "id": "11",
+      "title": "Xiaomi Mi 11",
+      "price": 800,
+      "desc": "The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.",
+      "category": "Xiaomi",
+      "img": "https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:80/plain/https://cellphones.com.vn/media/catalog/product/v/n/vn_iphone_15_green_pdp_image_position-1a_green_color_1_4.jpg",
+      "rating": {
+        "rate": 3.9,
+        "count": 120
+      }
+    },
+    {
+      "id": "12",
+      "title": "Huawei P40",
+      "price": 900,
+      "desc": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.",
+      "category": "Huawei",
+      "img": "https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:80/plain/https://cellphones.com.vn/media/catalog/product/v/n/vn_iphone_15_green_pdp_image_position-1a_green_color_1_4.jpg",
+      "rating": {
+        "rate": 3.9,
+        "count": 120
+      }
+    },
+    {
+      "id": "13",
+      "title": "Sony Xperia 5 III",
+      "price": 1200,
+      "desc": "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary.",
+      "category": "Sony",
+      "img": "https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:80/plain/https://cellphones.com.vn/media/catalog/product/v/n/vn_iphone_15_green_pdp_image_position-1a_green_color_1_4.jpg",
+      "rating": {
+        "rate": 3.9,
+        "count": 120
+      }
+    },
+    {
+      "id": "14",
+      "title": "LG Velvet",
+      "price": 750,
+      "desc": "If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.",
+      "category": "LG",
+      "img": "https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:80/plain/https://cellphones.com.vn/media/catalog/product/v/n/vn_iphone_15_green_pdp_image_position-1a_green_color_1_4.jpg",
+      "rating": {
+        "rate": 3.9,
+        "count": 120
+      }
+    },
+    {
+      "id": "15",
+      "title": "Motorola Edge",
+      "price": 850,
+      "desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      "category": "Motorola",
+      "img": "https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:80/plain/https://cellphones.com.vn/media/catalog/product/v/n/vn_iphone_15_green_pdp_image_position-1a_green_color_1_4.jpg",
+      "rating": {
+        "rate": 3.9,
+        "count": 120
+      }
+    },
+    {
+      "id": "33",
+      "title": "IPhone 11",
+      "price": 750,
+      "desc": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.",
+      "category": "Iphone",
+      "img": "https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:80/plain/https://cellphones.com.vn/media/catalog/product/v/n/vn_iphone_15_blue_pdp_image_position-1a_blue_color_1_4.jpg",
+      "rating": {
+        "rate": 3.9,
+        "count": 120
+      }
+    },
+    {
+      "id": "33",
+      "title": "Nokia",
+      "price": 850,
+      "desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      "category": "Motorola",
+      "img": "https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:80/plain/https://cellphones.com.vn/media/catalog/product/v/n/vn_iphone_15_green_pdp_image_position-1a_green_color_1_4.jpg",
+      "rating": {
+        "rate": 3.9,
+        "count": 120
+      }
+    },
+    {
+      "id": "36",
+      "title": "Nokia",
+      "price": 850,
+      "desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      "category": "Motorola",
+      "img": "https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:80/plain/https://cellphones.com.vn/media/catalog/product/v/n/vn_iphone_15_green_pdp_image_position-1a_green_color_1_4.jpg",
+      "rating": {
+        "rate": 3.9,
+        "count": 120
+      }
+    },
+    {
+      "id": "9",
+      "title": "Google Pixel 6",
+      "price": 950,
+      "desc": "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+      "category": "Google",
+      "img": "https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:80/plain/https://cellphones.com.vn/media/catalog/product/v/n/vn_iphone_15_black_pdp_image_position-1a_black_color_1_4.jpg",
+      "rating": {
+        "rate": 3.9,
+        "count": 120
+      }
+    }
+  ],
+  "mockDataUsers": [
+    {
+      "email": "ngongoctan@gmail.com",
+      "password": "Tan2003@",
+      "name": "Tan",
+      "access": "admin",
+      "avatar": "https://scontent.fdad3-1.fna.fbcdn.net/v/t39.30808-6/409334707_3623108471290018_4450070939494437976_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=efb6e6&_nc_eui2=AeF9CtVqMY_QJbEpZDt4Idrn58mTCydda8fnyZMLJ11rx-gl5PqVdesyKgNJutc7ZehRMeB-KVmwp-2ci4GOJrVw&_nc_ohc=RLMW6YTp35cAX-tmT56&_nc_oc=AQmqn1qtpJUw0BRWyFlHsiM6IBhGPIhYSRnK7c7nu-EKOlPLf8VG4vCNuEHE4mk2VV4JdGjdnI8pYlnP-0-9b-K-&_nc_ht=scontent.fdad3-1.fna&oh=00_AfBe0gmuIz-0rpEAO-X9P9OUrDIIeeQ8N8AatfGH2zKRSw&oe=658348B1",
+      "address": "Thanh Thuỷ - Lệ Thuỷ - Quảng Bình",
+      "phone": "(035) 7635003",
+      "id": "121e"
+    },
+    {
+      "id": "2",
+      "name": "Nam",
+      "email": "namluuhai@gmail.com",
+      "access": "user",
+      "password": "Nam",
+      "address": "789 Pine St",
+      "phone": "(111)222-3333",
+      "avatar": "https://scontent.fdad3-1.fna.fbcdn.net/v/t39.30808-6/409334707_3623108471290018_4450070939494437976_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=efb6e6&_nc_eui2=AeF9CtVqMY_QJbEpZDt4Idrn58mTCydda8fnyZMLJ11rx-gl5PqVdesyKgNJutc7ZehRMeB-KVmwp-2ci4GOJrVw&_nc_ohc=V2HWm2qXrpAAX_f_Zc7&_nc_oc=AQlBzzrez6XyRkaHCbPUJpG0otIYBOiOqpjfoW8hDiA8LFVLXxQ3DkLzwsbjqcCMCEWybG14szngzrHrv18rER0j&_nc_ht=scontent.fdad3-1.fna&oh=00_AfC755Mkq5nwn-YDEJifX7cdB-A-dEf0cMT_VG2ZW3yqgw&oe=658348B1"
+    },
+    {
+      "id": "3",
+      "name": "Kien",
+      "email": "kienlt@gmail.com",
+      "access": "user",
+      "password": "kkkkk",
+      "address": "789 Pine St",
+      "phone": "(111)222-3333",
+      "avatar": "https://scontent.fdad3-1.fna.fbcdn.net/v/t39.30808-6/409334707_3623108471290018_4450070939494437976_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=efb6e6&_nc_eui2=AeF9CtVqMY_QJbEpZDt4Idrn58mTCydda8fnyZMLJ11rx-gl5PqVdesyKgNJutc7ZehRMeB-KVmwp-2ci4GOJrVw&_nc_ohc=V2HWm2qXrpAAX_f_Zc7&_nc_oc=AQlBzzrez6XyRkaHCbPUJpG0otIYBOiOqpjfoW8hDiA8LFVLXxQ3DkLzwsbjqcCMCEWybG14szngzrHrv18rER0j&_nc_ht=scontent.fdad3-1.fna&oh=00_AfC755Mkq5nwn-YDEJifX7cdB-A-dEf0cMT_VG2ZW3yqgw&oe=658348B1"
+    },
+    {
+      "id": "4",
+      "name": "Van",
+      "email": "vannguyen@gmail.com",
+      "access": "user",
+      "password": "vv123",
+      "address": "789 Pine St",
+      "phone": "(111)222-3333",
+      "avatar": "https://scontent.fdad3-1.fna.fbcdn.net/v/t39.30808-6/409334707_3623108471290018_4450070939494437976_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=efb6e6&_nc_eui2=AeF9CtVqMY_QJbEpZDt4Idrn58mTCydda8fnyZMLJ11rx-gl5PqVdesyKgNJutc7ZehRMeB-KVmwp-2ci4GOJrVw&_nc_ohc=V2HWm2qXrpAAX_f_Zc7&_nc_oc=AQlBzzrez6XyRkaHCbPUJpG0otIYBOiOqpjfoW8hDiA8LFVLXxQ3DkLzwsbjqcCMCEWybG14szngzrHrv18rER0j&_nc_ht=scontent.fdad3-1.fna&oh=00_AfC755Mkq5nwn-YDEJifX7cdB-A-dEf0cMT_VG2ZW3yqgw&oe=658348B1"
+    },
+    {
+      "id": "121e",
+      "email": "ngongoctan@gmail.com",
+      "password": "Tan2003@",
+      "name": "Tan",
+      "access": "admin",
+      "avatar": "https://scontent.fdad3-1.fna.fbcdn.net/v/t39.30808-6/409334707_3623108471290018_4450070939494437976_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=efb6e6&_nc_eui2=AeF9CtVqMY_QJbEpZDt4Idrn58mTCydda8fnyZMLJ11rx-gl5PqVdesyKgNJutc7ZehRMeB-KVmwp-2ci4GOJrVw&_nc_ohc=RLMW6YTp35cAX-tmT56&_nc_oc=AQmqn1qtpJUw0BRWyFlHsiM6IBhGPIhYSRnK7c7nu-EKOlPLf8VG4vCNuEHE4mk2VV4JdGjdnI8pYlnP-0-9b-K-&_nc_ht=scontent.fdad3-1.fna&oh=00_AfBe0gmuIz-0rpEAO-X9P9OUrDIIeeQ8N8AatfGH2zKRSw&oe=658348B1",
+      "address": "Thanh Thuỷ - Lệ Thuỷ - Quảng Bình",
+      "phone": "(035) 7635003"
+    }
+  ],
+  "mockDataManager": []
+}
