@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 export const AuthUser = () => {
 
@@ -20,6 +21,8 @@ export const AuthUser = () => {
         setUser(user);
         setRole(role);
     };
+
+    const navigate = useNavigate();
 
     const http = axios.create({
         baseURL: 'http://localhost:5000/api',
@@ -47,6 +50,11 @@ export const AuthUser = () => {
         }
     };
 
+    const logout = () => {
+        localStorage.clear();
+        navigate('/login');
+    }
+
     return {
         setToken: saveToken,
         token,
@@ -55,5 +63,6 @@ export const AuthUser = () => {
         getToken,
         postData,
         getData,
+        logout
     };
 };

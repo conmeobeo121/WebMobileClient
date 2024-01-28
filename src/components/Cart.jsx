@@ -1,15 +1,31 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import { delItem } from '../redux/actions/index';
+import { __clearCart, __deleteItem } from '../redux/actions/index';
+import { AuthUser } from './buttons/AuthContext';
 
 const Cart = () => {
-    const state = useSelector((state) => state.addItem);
+    const [userInfo, setUserInfo] = useState({
+        phone: "",
+    });
+
+    const { postData } = AuthUser();
+
+    const state = useSelector((state) => state.rootReducer);
     const dispatch = useDispatch();
 
     const handleClose = (item) => {
-        dispatch(delItem(item));
+        dispatch(__deleteItem(item));
     }
+
+    const [user, setUser] = useState(null);
+    useEffect(() => {
+        const exist = localStorage.getItem('user');
+        console.log('exists', exist);
+        if (exist) {
+            setUser(JSON.parse(exist));
+        }
+    }, []);
 
     const productItems = state.map((item) => (
         <div className="card mb-3" key={item.id}>
@@ -17,7 +33,7 @@ const Cart = () => {
                 <div className="d-flex justify-content-between">
                     <div className="d-flex flex-row align-items-center">
                         <div>
-                            <img src={item.img} className="img-fluid rounded-3" alt="Shopping item" style={{ width: 85 }} />
+                            <img src={item.images[0]} className="img-fluid rounded-3" alt="Shopping item" style={{ width: 85 }} />
                         </div>
                         <div className="ms-3">
                             <h5>{item.title}</h5>
@@ -25,7 +41,7 @@ const Cart = () => {
                     </div>
                     <div className="d-flex flex-row align-items-center">
                         <div style={{ width: 50 }}>
-                            <h5 className="fw-normal mb-0">2</h5>
+                            <h5 className="fw-normal mb-0">{item.quantity}</h5>
                         </div>
                         <div style={{ width: 80 }}>
                             <h5 className="mb-0">${item.price}</h5>
@@ -37,7 +53,72 @@ const Cart = () => {
         </div>
     ));
 
+
     const total = state.reduce((acc, item) => acc + item.price, 0);
+
+    const handleInputChange = (e) => {
+        const { name, value } = e.target;
+        setUserInfo((prevInfo) => ({
+            ...prevInfo,
+            [name]: value,
+        }));
+    };
+
+    const handleCheckout = async () => {
+        try {
+            const exist = localStorage.getItem('user');
+            const user = exist ? JSON.parse(exist) : null;
+
+            if (!user) {
+                return;
+            }
+
+            const total = state.reduce((acc, item) => {
+                const itemTotal = item.price * item.quantity;
+                return isNaN(itemTotal) ? acc : acc + itemTotal;
+            }, 0);
+
+            const checkoutData = {
+                products: state.map(product => ({
+                    product: product._id,
+                    name: product.title,
+                    quantity: product.quantity,
+                    price: product.price,
+                    images: product.images[0],
+                })),
+                user: {
+                    _id: user._id,
+                    name: user.name,
+                },
+                total: total.toFixed(2),
+            };
+
+            localStorage.setItem('checkouts', JSON.stringify(checkoutData));
+
+            const response = await postData('/checkout', checkoutData);
+
+            console.log('Response Data:', response);
+
+            if (response && response.success !== undefined) {
+                if (response.success) {
+                    console.log('Success checkout:', response.message);
+
+                    dispatch(__clearCart());
+
+                    setUserInfo({
+                        phone: "",
+                    });
+                } else {
+                    console.error('Error during checkout:', response.message);
+                }
+            } else {
+                console.error('Invalid response structure during checkout:', response);
+            }
+
+        } catch (error) {
+            console.log('Error during checkout:', error);
+        }
+    };
 
     return (
         <>
@@ -76,26 +157,13 @@ const Cart = () => {
                                                     <a href="#!" type="submit" className="text-white"><i className="fab fa-cc-paypal fa-2x" /></a>
                                                     <form className="mt-4">
                                                         <div className="form-outline form-white mb-4">
-                                                            <input type="text" id="typeName" className="form-control form-control-lg" siez={17} placeholder="Cardholder's Name" />
+                                                            <input type="text" id="typeName" className="form-control form-control-lg" siez={17} placeholder='Card name' value={user ? user.name : ''} />
                                                             <label className="form-label" htmlFor="typeName">Cardholder's Name</label>
                                                         </div>
                                                         <div className="form-outline form-white mb-4">
                                                             <input type="text" id="typeText" className="form-control form-control-lg" siez={17} placeholder="1234 5678 9012 3457" minLength={19} maxLength={19} />
-                                                            <label className="form-label" htmlFor="typeText">Card Number</label>
-                                                        </div>
-                                                        <div className="row mb-4">
-                                                            <div className="col-md-6">
-                                                                <div className="form-outline form-white">
-                                                                    <input type="text" id="typeExp" className="form-control form-control-lg" placeholder="MM/YYYY" size={7} minLength={7} maxLength={7} />
-                                                                    <label className="form-label" htmlFor="typeExp">Expiration</label>
-                                                                </div>
-                                                            </div>
-                                                            <div className="col-md-6">
-                                                                <div className="form-outline form-white">
-                                                                    <input type="password" id="typeText" className="form-control form-control-lg" placeholder="●●●" size={1} minLength={3} maxLength={3} />
-                                                                    <label className="form-label" htmlFor="typeText">Cvv</label>
-                                                                </div>
-                                                            </div>
+                                                            <label className="form-label" htmlFor="typeText" value={userInfo.phone}
+                                                                onChange={handleInputChange}>Card Number</label>
                                                         </div>
                                                     </form>
                                                     <hr className="my-4" />
@@ -103,9 +171,9 @@ const Cart = () => {
                                                         <p className="mb-2">Total (Incl. taxes)</p>
                                                         <p className="mb-2">${total.toFixed(2)}</p>
                                                     </div>
-                                                    <button type="button" className="btn btn-info btn-block btn-lg">
+                                                    <button type="button" className="btn btn-info btn-block btn-lg"
+                                                        onClick={handleCheckout}>
                                                         <div className="d-flex justify-content-between">
-                                                            <span>${total.toFixed(2)}</span>
                                                             <span>Checkout <i className="fas fa-long-arrow-alt-right ms-2" /></span>
                                                         </div>
                                                     </button>
@@ -122,7 +190,6 @@ const Cart = () => {
             <div className="card mb-4 mb-lg-0 text-center">
                 <div className="card-body">
                     <p><strong>We accept</strong></p>
-                    {/* ... (payment icons) ... */}
                     <img class="me-2" width="45px"
                         src="https://mdbcdn.b-cdn.net/wp-content/plugins/woocommerce-gateway-stripe/assets/images/visa.svg"
                         alt="Visa" />

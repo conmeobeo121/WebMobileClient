@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 import { AuthUser } from './AuthContext';
 import axios from 'axios';
@@ -39,9 +39,9 @@ const Login = () => {
                 console.log('User:', response);
 
                 if (response.role === ROLES.ADMIN) {
-                    navigate('/admin-profile');
+                    navigate('/admin');
                 } else if (response.role === ROLES.CUSTOMER) {
-                    navigate('/manager-profile');
+                    navigate('/');
                 }
             } else {
                 console.error('Token or role is missing in the server response.');
@@ -93,7 +93,9 @@ const Login = () => {
                             </form>
                             {error && <div className="alert alert-danger mt-3">{error}</div>}
                             <div className="mt-3">
-                                <p>Don t have an account? <button className="btn btn-link">Signup</button></p>
+                                <p>Don t have an account?
+                                    <Link to={'/signup'} className="btn btn-link">Signup</Link>
+                                </p>
                             </div>
                         </div>
                     </div>

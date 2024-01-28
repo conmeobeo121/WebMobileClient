@@ -1,27 +1,30 @@
-export const addItem = (product) => {
+import { add_product, clear_cart, del_product, update_quantity } from "../constrants";
+
+export const __addItem = (product) => {
     return {
-        type: "ADDITEM",
-        payload: product
+        type: add_product,
+        payload: { ...product, quantity: 1 }
     }
 }
 
-export const delItem = (product) => {
+
+export const __deleteItem = (id) => {
     return {
-        type: "DELITEM",
-        payload: product
+        type: del_product,
+        payload: id
     }
 }
 
-export const loginUser = (user) => ({
-    type: 'LOGIN_USER',
-    payload: user,
-});
+export const __updateQuantity = (id, quantity) => {
+    return {
+        type: update_quantity,
+        payload: { id, quantity },
+    };
+};
 
-export const logoutUser = () => ({
-    type: 'LOGOUT_USER',
-});
-
-export const deleteUser = (userId) => ({
-    type: 'DELETE_USER',
-    payload: { userId },
-});
+export const __clearCart = () => {
+    return {
+        type: clear_cart,
+        payload: [],
+    };
+};

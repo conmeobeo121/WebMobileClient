@@ -1,10 +1,8 @@
-import addItem from "./EditItem";
-import userReducer from './addUser';
+import rootReducer from "./reducers";
 import { combineReducers } from "redux";
 
 const rootReducers = combineReducers({
-    userReducer,
-    addItem,
+    rootReducer
 })
 
 export default rootReducers;

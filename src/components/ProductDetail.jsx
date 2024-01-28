@@ -3,7 +3,7 @@ import { useParams } from 'react-router';
 import Skeleton from 'react-loading-skeleton';
 import { NavLink } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
-import { addItem, delItem } from './../redux/actions/index';
+import { __addItem, __deleteItem } from './../redux/actions/index';
 
 const ProductDetail = () => {
     const { id } = useParams();
@@ -13,7 +13,7 @@ const ProductDetail = () => {
     useEffect(() => {
         const getProduct = async () => {
             try {
-                const res = await fetch(`http://localhost:3000/mockDataProducts/${id}`);
+                const res = await fetch(`http://localhost:5000/api/products/${id}`);
                 const data = await res.json();
                 setProduct(data);
                 setLoading(false);
@@ -26,7 +26,7 @@ const ProductDetail = () => {
         getProduct();
     }, [id]);
 
-    const cart = useSelector((state) => state.addItem);
+    const cart = useSelector((state) => state.rootReducer);
     const dispatch = useDispatch();
     const [cartBtn, setCartBtn] = useState('Add to cart');
 
@@ -37,8 +37,8 @@ const ProductDetail = () => {
 
     const handleCart = () => {
         (cartBtn === 'Add to cart')
-            ? dispatch(addItem(product))
-            : dispatch(delItem(product));
+            ? dispatch(__addItem(product))
+            : dispatch(__deleteItem(product));
     }
 
     const Loading = () => {
@@ -110,7 +110,7 @@ const ProductDetail = () => {
                                     <div className="col-md-6">
                                         <div className="images p-3">
                                             <div className="text-center p-4">
-                                                <img id="main-image" alt="product" src={product.img} width="250" />
+                                                <img id="main-image" alt="product" src={product.images[0]} width="250" />
                                             </div>
                                         </div>
                                     </div>
@@ -124,14 +124,14 @@ const ProductDetail = () => {
                                                     {product.title}
                                                 </h5>
 
-                                                Rating {product.rating && product.rating.rate}
+                                                Rating {product.rating}
                                                 <i className="fa fa-star text-warning"></i>
 
                                                 <div className="price d-flex flex-row align-items-center">
                                                     <big className="display-6"><b>${product.price}</b></big>
                                                 </div>
                                             </div>
-                                            <p className="text-muted">{product.desc}</p>
+                                            <p className="text-muted">{product.description}</p>
                                             <div className="cart mt-4 align-items-center">
                                                 <button onClick={handleCart} className="btn btn-outline-dark text-uppercase mr-2 px-4">
                                                     {cartBtn}
