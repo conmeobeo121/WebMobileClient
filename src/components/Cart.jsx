@@ -158,7 +158,7 @@ const Cart = () => {
                                                     <form className="mt-4">
                                                         <div className="form-outline form-white mb-4">
                                                             <input type="text" id="typeName" className="form-control form-control-lg" siez={17} placeholder='Card name' value={user ? user.name : ''} />
-                                                            <label className="form-label" htmlFor="typeName">Cardholder's Name</label>
+                                                            <label className="form-label" htmlFor="typeName">Cardholders Name</label>
                                                         </div>
                                                         <div className="form-outline form-white mb-4">
                                                             <input type="text" id="typeText" className="form-control form-control-lg" siez={17} placeholder="1234 5678 9012 3457" minLength={19} maxLength={19} />
